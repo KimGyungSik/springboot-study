@@ -13,9 +13,4 @@ public class SpringbootStudyApplication {
         SpringApplication.run(SpringbootStudyApplication.class, args);
     }
 
-    @GetMapping("/")
-    public String hello() {
-        return "hello springboot 222233";
-    }
-
 }
