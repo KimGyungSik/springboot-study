@@ -10,11 +10,14 @@
 
 ## Redirect와 Forward의 차이
 * ### redirect 요청 2번, 응답 2번
-  * <img src="" width="500">
+  * <img src="https://github.com/user-attachments/assets/859534f1-9157-4392-9955-7d058ddfbdce" width="500">
+
 * ### forward 요청 1번, 응답 1번
-  * <img src="" width="500">
+  * <img src="https://github.com/user-attachments/assets/87b89ae2-5cd5-46e3-a961-109d6a39f0bb" width="500">
+
   * ### forward의 예시
-  * <img src="" width="500">
+  * <img src="https://github.com/user-attachments/assets/766b29b4-14d9-4caa-a4fb-c060598c7fe6" width="500">
+
 
 * ## HTTP 요청과 요청 방법
   * ### URL 직접입력 (GET)
