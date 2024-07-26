@@ -1,6 +1,7 @@
 package com.fastcampus.springboot_study.ch3.di3;
 
 
+import jakarta.inject.Inject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.ApplicationContext;
@@ -17,7 +18,10 @@ class Car {
 //    @Resource(name="engine") // byName으로 빈을 검색
 //    @Resource(name="superEngine")
 
-//    @Inject  // @Autowired와 거의 같음. required=false
+//    @Autowired // byType으로 빈을 검색
+//    @Qualifier("superEngine") // 검색된 빈 중에서 이름이 superEngine을 주입
+
+    @Inject  // @Autowired와 거의 같음. required=false
     Engine engine;
     //    @Autowired
     @Resource(name="door")
@@ -58,6 +62,9 @@ public class Main {
         ApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
         Car car = (Car)ac.getBean("car"); // byName 객체(빈)을 조회
         System.out.println("car = " + car);
+
+        Map<String,String> env = System.getenv();
+        System.out.println("enc = "+env);
     }
 }
 
