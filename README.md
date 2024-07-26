@@ -92,4 +92,8 @@
   * ### new 연산자로 객체생성 : 컴파일 시점에 결정
   * ### Reflection API 사용 : 런타임 시점에 결정 
 * ## Java Reflection API란?  
+  * 사진
 * ## Class 객체란?
+  * 사진
+
+* ## 스프링 애너테이션 - @ComponentScan과 @Component
