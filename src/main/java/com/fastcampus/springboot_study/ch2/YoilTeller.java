@@ -1,4 +1,4 @@
-package com.fastcampus.ch2;
+package com.fastcampus.springboot_study.ch2;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -25,3 +25,45 @@
   * ### 폼<form>으로 요청 (GET,POST)
   * ### redirect -다른 URL로 이동 (GET), 자동재요청, 브라우저 URL 변경됨
   * ### forward - 요청(GET,POST)을 다른 URL로 전달, 브라우저 URL 변경 X
+
+* ## RedirectAttributes -> Model의 자손
+  * ### redirect 요청 시 사용
+  * ### addAttribute : QueryString에 붙음 
+  * ### FlashAttribute : 세션객체에 저장, 일회성
+  * ```java
+     @PostMapping("/login")
+         public String login(String id, String pwd, RedirectAttributes model) throws Exception{
+                 // 1. id, pwd를 확인
+                    if(loginCheck(id,pwd)) {
+                 // 2. 일치하면, userInfo.html
+                         model.addAttribute("id", id);
+                         model.addAttribute("pwd", pwd);
+                         return "userInfo" ;  // userInfo.html
+                   } else {
+                 //    일치하지 않으면, login.html로 이동
+                 //           String msg = URLEncoder.encode("id 또는 pwd가 일치하지 않습니다.", "utf-8");
+                              String msg = "id 또는 pwd가 일치하지 않습니다.";
+                              model.addAttribute("msg",msg);  -> 2번쨰인 자동 요청시 QueryString에 붙어짐
+                              model.addFlashAttribute("msg","일회용 메세지"); -> 2번째인 자동 요청시 세션객체에 저장됨/한번 전달되고 지워짐
+                              req.setAttribute("msg","request에 저장된 msg"); -> request객체에 저장되는 것, redirect시 저장안됨
+                              return "forward:/";
+                 //           return "redirect:/login/login?msg="+msg;  // GET - URL재작성
+         }
+     }
+    
+
+* ## Thymeleaf란?
+  * <img src="" width="500">
+  * <img src="" width="500">
+  * <img src="" width="500">
+  * <img src="" width="500">
+  * <img src="" width="500">
+  * <img src="" width="500">
+  * <img src="" width="500">
+  * <img src="" width="500">
+  * <img src="" width="500">
+
+* ## Thymeleaf 메서드들  
+  * ### https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#dates
+* ## 기본객체 접근법 (저장 : setAttribute(), 읽기 : getAttribute())
+  * <img src="" width="500">
