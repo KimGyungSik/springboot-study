@@ -96,16 +96,24 @@
 
 * ## 스프링 애너테이션 - @ComponentScan과 @Component
   * ### Spring MVC는 .xml 설정파일을 Bean을 등록했는데 Spring Boot에서는 자바설정파일(에너테이션 활용)에 Bean을 등록  
-  * <img src="" width="500">
-  * <img src="" width="500">
+  * <img src="https://github.com/user-attachments/assets/615a4964-acd9-4e7d-add3-3ccf29aa42c6" width="500">
+
+  * <img src="https://github.com/user-attachments/assets/27499bf0-590f-47d0-93fb-ec1d3b0bd811" width="500">
+
 
 
 * ## 의존성 관리와 설정의 자동화 (Spring Framework와 Spring Boot의 가장 큰 차이점)
-  * <img src="" width="500">
-  * <img src="" width="500">
-  * <img src="" width="500">
-  * <img src="" width="500">
-  * <img src="" width="500">
-  * <img src="" width="500">
+  * <img src="https://github.com/user-attachments/assets/b093b837-6ade-4199-b35b-659dca0d185a" width="500">
+
+  * <img src="https://github.com/user-attachments/assets/901b907d-d6e0-4028-8ad2-a790f26a4721" width="500">
+
+  * <img src="https://github.com/user-attachments/assets/b9e9f44d-85c4-4c18-a6bc-1f29c1d3a448" width="500">
+
+  * <img src="https://github.com/user-attachments/assets/547227fb-1e3d-496c-8170-303b65a0e75d" width="500">
+
+  * <img src="https://github.com/user-attachments/assets/04c36ea4-d38b-4be7-b6ee-c4a26d665eb8" width="500">
+
+  * <img src="https://github.com/user-attachments/assets/35a3eed1-e8fa-4a96-99da-9c9fad83cec0" width="500">
+
   
   
