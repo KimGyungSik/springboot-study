@@ -67,3 +67,13 @@
   * ### https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#dates
 * ## 기본객체 접근법 (저장 : setAttribute(), 읽기 : getAttribute())
   * <img src="" width="500">
+---
+
+* ## 사용과 생성을 분리하는 이유  
+  * ### 사용 x n , 생성 x 1 
+  * ### 변경부분은 생성하는 쪽에서만 발생하므로 변경사항이 1개
+  * ### 생성하는 쪽에서 new연산자로 객체생성을 하기보다 Reflection API를 활용해 사용시 동적으로 생성 -> '변경에 유리'
+  * ### new 연산자로 객체생성 : 컴파일 시점에 결정
+  * ### Reflection API 사용 : 런타임 시점에 결정 
+* ## Java Reflection API란?  
+* ## Class 객체란?
