@@ -79,10 +79,6 @@
   * ### https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#dates
 * ## 기본객체 접근법 (저장 : setAttribute(), 읽기 : getAttribute())
   * <img src="https://github.com/user-attachments/assets/2371f267-a05b-4bb8-9db8-d40d67f84417" width="500">
-
-  
-
-  * <img src="" width="500">
 ---
 
 * ## 사용과 생성을 분리하는 이유  
@@ -92,8 +88,10 @@
   * ### new 연산자로 객체생성 : 컴파일 시점에 결정
   * ### Reflection API 사용 : 런타임 시점에 결정 
 * ## Java Reflection API란?  
-  * 사진
+  * * <img src="https://github.com/user-attachments/assets/801576d3-98c1-4bf3-bebc-59e336502964" width="500">
+
 * ## Class 객체란?
-  * 사진
+  * * <img src="https://github.com/user-attachments/assets/0d498393-1105-48ba-bdd3-448ad0ec1824" width="500">
+
 
 * ## 스프링 애너테이션 - @ComponentScan과 @Component
