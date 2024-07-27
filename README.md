@@ -131,9 +131,9 @@
   
 * ## 7/27 공부하다 생긴 의문점들
   * ## @Component와 @Bean의 차이
-    * ### @Component는 클래스 레벨에서 붙어지는 에너테이션
-    * ### @Bean은 메서드 레벨에서 붙어지는 에터테이션 (@Configuration이 붙은 클래스 안에서 정의)
-    * ### 둘다 스프링 빈으로 등록된다는 공통점이 있음 
+    > ### @Component는 클래스 레벨에서 붙어지는 에너테이션
+    > ### @Bean은 메서드 레벨에서 붙어지는 에터테이션 (@Configuration이 붙은 클래스 안에서 정의)
+    > ### 둘다 스프링 빈으로 등록된다는 공통점이 있음 
   * ## @ComponentScan과 @Configuration을 같이 쓰는 이유?
     > ### @Configuration는 내부에 @Component가 있어서 해당 설정이 자동으로 스프링 빈으로 등록 -> 빈으로 등록되어야 @ComponentScan도 동작
     > ### @Configuration : 스프링의 빈으로 등록되면서 각종 자바코드 구성정보(@Bean메서드)와 부가 에너테이션을 스프링 컨테이너가 인식할 수 있게 해줌
