@@ -121,3 +121,10 @@
     * <img src="" width="500">
   * ### @Import와 ImportSelector : 그룹 빈을 동적으로 조건부 등록
     * <img src="" width="500">
+    * ### 외부 설정 파일 - application.properties
+      * <img src="" width="500">
+      * ### # 빈등록시 중복된 이름으로 빈등록할 때 덮어쓰기 허용 (@Configuration으로 @Bean 자동 등록시 이름 충돌)
+             spring.main.allow-bean-definition-overriding=true
+      * <img src="" width="500">
+
+  

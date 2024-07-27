@@ -73,10 +73,10 @@ class OSCondition implements Condition {
         return env.getProperty("mode").equals("dev");
     }
 }
-//@Configuration // 자바 Bean 설정파일이라는 뜻
-//@Import({Config1.class, Config2.class})
+@Configuration // 자바 Bean 설정파일이라는 뜻
+@Import({Config1.class, Config2.class})
 //@Import(MyImportSelector.class)
-@EnableMyAutoConfiguration("test2")
+//@EnableMyAutoConfiguration("test2")
 class MainConfig { @Bean Car car() { return new Car();} }
 class Config1 { @Bean Car sportsCar() { return new SportsCar();}}
 class Config2 { @Bean Car sportsCar() { return new SportsCar2();}}
@@ -107,7 +107,7 @@ class MyImportSelector implements ImportSelector {
 //@Configuration은 우선 @Component를 메타 애노테이션으로 가지고 있으므로 자신이 스프링의 빈으로 등록될 대상임을 각주로 표시합니다. 그러면서 @ComponentScan 대상이 됩니다.
 //단지 @ComponentScan은 @Configuration이 붙은 클래스에 사용해야 스프링 컨테이너가 인식할 수 있다고 생각하시면 됩니다.
 //스프링 컨테이너를 구성하기 위한 @Configuration 은 @ComponentScan 유무에 상관없이 최초 1회는 필수라는 뜻
-@EnableConfigurationProperties({MyProperties.class})
+@EnableConfigurationProperties({MyProperties.class}) // MyProperties클래스가 빈으로 등록됨
 @Configuration //@SpringBootConfiguration  // @Configuration하고 동일
 //@EnableAutoConfiguration
 @ComponentScan
@@ -139,9 +139,9 @@ public class Main implements CommandLineRunner {
 
 
 //        System.out.println("ac.getBean(\"sportsCar\") = " + ac.getBean("sportsCar"));
-//        MyProperties prop = ac.getBean(MyProperties.class);  // 수동 빈 검색해서 주입
-//        System.out.println("prop.getDomain() = " + prop.getDomain());
-//        System.out.println("prop.getEmail() = " + prop.getEmail());
+        MyProperties prop = ac.getBean(MyProperties.class);  // 수동 빈 검색해서 주입
+        System.out.println("prop.getDomain() = " + prop.getDomain());
+        System.out.println("prop.getEmail() = " + prop.getEmail());
 
     }
 
