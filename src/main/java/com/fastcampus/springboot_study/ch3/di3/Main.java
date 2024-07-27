@@ -24,7 +24,7 @@ class Car {
     @Inject  // @Autowired와 거의 같음. required=false
     Engine engine;
     //    @Autowired
-    @Resource(name="door")
+    @Resource
     Door door;
 
 //    public Car() {}
@@ -44,7 +44,7 @@ class Car {
     }
 }
 
-//@Component
+@Component
 class Engine {}
 
 //@Component("superEngine")
