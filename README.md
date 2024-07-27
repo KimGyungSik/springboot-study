@@ -183,6 +183,7 @@
     * ### iv가 있으면 동기화 처리가 되어 있어야함
   * ## Spring Context가 로딩 시점에 로직 실행 하는 방법 (@PostCOnstruct, @PreDestroy)
     * ### 스프링 프레임워크는 Bean 생성부터 소멸까지의 생명주기 관리를 해줌 (즉, 객체 관리 주체가 개발자가 아닌 프레임워크)
+    * <img src="https://github.com/user-attachments/assets/a03c59a4-4874-46c9-923d-07ac030cbea3" width="500">
     * ### @PostConstruct : '초기화 콜백'
     * ### @PreDestroy : '소멸 콜백'
   
