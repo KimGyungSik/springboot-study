@@ -135,14 +135,14 @@
     * ### @Bean은 메서드 레벨에서 붙어지는 에터테이션 (@Configuration이 붙은 클래스 안에서 정의)
     * ### 둘다 스프링 빈으로 등록된다는 공통점이 있음 
   * ## @ComponentScan과 @Configuration을 같이 쓰는 이유?
-    * ### @Configuration는 내부에 @Component가 있어서 해당 설정이 자동으로 스프링 빈으로 등록 -> 빈으로 등록되어야 @ComponentScan도 동작
-    * ### @Configuration : 스프링의 빈으로 등록되면서 각종 자바코드 구성정보(@Bean메서드)와 부가 에너테이션을 스프링 컨테이너가 인식할 수 있게 해줌
-    * ### @ComponentScan : @Component 에너테이션이 붙은 클래스를 자동으로 빈 등록
-    * ### @ComponentScan은 @Configuration이 붙은 클래스에 사용해야 스프링 컨테이너가 인식할 수 있다고 생각
-    * ### @ComponentScan이 붙은 @Configuration클래스도 @ComponentScan이 동작해서 빈으로 등록이 되는데, @Configuration 클래스가 빈으로 등록이 안되면, @ComponentScan을 스프링이 인식을 못함
+    > ### @Configuration는 내부에 @Component가 있어서 해당 설정이 자동으로 스프링 빈으로 등록 -> 빈으로 등록되어야 @ComponentScan도 동작
+    > ### @Configuration : 스프링의 빈으로 등록되면서 각종 자바코드 구성정보(@Bean메서드)와 부가 에너테이션을 스프링 컨테이너가 인식할 수 있게 해줌
+    > ### @ComponentScan : @Component 에너테이션이 붙은 클래스를 자동으로 빈 등록
+    > ### @ComponentScan은 @Configuration이 붙은 클래스에 사용해야 스프링 컨테이너가 인식할 수 있다고 생각
+    > ### @ComponentScan이 붙은 @Configuration클래스도 @ComponentScan이 동작해서 빈으로 등록이 되는데, @Configuration 클래스가 빈으로 등록이 안되면, @ComponentScan을 스프링이 인식을 못함
   * ## static변수에 왜 @Autowired를 붙이지 못하나?
-    * ### 정적 필드가 클래스 로더에 의해 인스턴스화 될 때 아직 Spring Context는 로드되지 않았기 때문에 
-    * ### 해결방법 2가지
+    > ### 정적 필드가 클래스 로더에 의해 인스턴스화 될 때 아직 Spring Context는 로드되지 않았기 때문에 
+    > ### 해결방법 2가지
       * ### @PostConstruct 사용
         * ```java
               @Autowired
