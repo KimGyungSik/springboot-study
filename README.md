@@ -128,3 +128,60 @@
     * <img src="" width="500">
 
   
+* ## 7/27 공부하다 생긴 의문점들
+  * ## @Component와 @Bean의 차이
+    * ### @Component는 클래스 레벨에서 붙어지는 에너테이션
+    * ### @Bean은 메서드 레벨에서 붙어지는 에터테이션 (@Configuration이 붙은 클래스 안에서 정의)
+    * ### 둘다 스프링 빈으로 등록된다는 공통점이 있음 
+  * ## @ComponentScan과 @Configuration을 같이 쓰는 이유?
+    * ### @Configuration는 내부에 @Component가 있어서 해당 설정이 자동으로 스프링 빈으로 등록 -> 빈으로 등록되어야 @ComponentScan도 동작
+    * ### @Configuration : 스프링의 빈으로 등록되면서 각종 자바코드 구성정보(@Bean메서드)와 부가 에너테이션을 스프링 컨테이너가 인식할 수 있게 해줌
+    * ### @ComponentScan : @Component 에너테이션이 붙은 클래스를 자동으로 빈 등록
+    * ### @ComponentScan은 @Configuration이 붙은 클래스에 사용해야 스프링 컨테이너가 인식할 수 있다고 생각
+    * ### @ComponentScan이 붙은 @Configuration클래스도 @ComponentScan이 동작해서 빈으로 등록이 되는데, @Configuration 클래스가 빈으로 등록이 안되면, @ComponentScan을 스프링이 인식을 못함
+  * ## static변수에 왜 @Autowired를 붙이지 못하나?
+    * ### 정적 필드가 클래스 로더에 의해 인스턴스화 될 때 아직 Spring Context는 로드되지 않았기 때문에 
+    * ### 해결방법 2가지
+      * ### @PostConstruct 사용
+        * ```java
+              @Autowired
+               private FooObject nonStaticObj;
+
+               private static FooObject staticObj;
+
+               @PostConstruct
+               private void initStatic() {
+                   staticObj = this.nonStaticObj;
+               }
+        * ### @PostConstruct는 Spring에 의존적이지 않은 Java의 기능, 의존성 주입이 끝난 이후의 작업이 필요할 경우 사용
+        * ### 생성자가 동작하는 시점에는 의존성 주입이 되지 않은 상태 
+        * ### @PostConstruct가 적용된 메서드는 Bean LifeCycle에서 한 번만 수행되는 것이 보장됨 -> 생성자가 여러번 호출이 되는 것을 방지
+      * ### @Autowired 생성자 주입
+        * ```java
+                @Component
+                public class TestObject {
+                   private static FooObject fooObj;
+
+                   @Autowired
+                   private TestObject(FooObject fooObj) {
+                         this.fooObj = fooObj;
+                   }
+
+                   // 혹은 @Autowired setter를 이용할 수도 있다.
+                   @Autowired
+                   public void setFooObj(FooObject fooObj) {
+                      this.fooObj = fooObj;
+                   }
+                }
+      * ### 하지만 Spring은 기본적으로 빈을 싱글톤으로 관리하므로, static 필드를 사용하지 않아도 같은 인스턴스 공유가능
+      * ###  static필드는 여러 문제를 초래할 수 있어 권장하지 않음 (private final 권장)
+  * ## Bean(싱글톤)등록시 유의할 점
+    * ### 싱글톤(공유객체) 안에 프로토타입(매번 새로운 객체 생성)을 넣지마라
+    * ### read-only
+    * ### 불변 -> 변하지 않으려면 상태가 없어야함 (iv 존재 X)
+    * ### iv가 있으면 동기화 처리가 되어 있어야함
+  * ## Spring Context가 로딩 시점에 로직 실행 하는 방법 (@PostCOnstruct, @PreDestroy)
+    * ### 스프링 프레임워크는 Bean 생성부터 소멸까지의 생명주기 관리를 해줌 (즉, 객체 관리 주체가 개발자가 아닌 프레임워크)
+    * ### @PostConstruct : '초기화 콜백'
+    * ### @PreDestroy : '소멸 콜백'
+  
