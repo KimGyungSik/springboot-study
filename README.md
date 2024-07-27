@@ -154,9 +154,9 @@
                private void initStatic() {
                    staticObj = this.nonStaticObj;
                }
-        * ### @PostConstruct는 Spring에 의존적이지 않은 Java의 기능, 의존성 주입이 끝난 이후의 작업이 필요할 경우 사용
-        * ### 생성자가 동작하는 시점에는 의존성 주입이 되지 않은 상태 
-        * ### @PostConstruct가 적용된 메서드는 Bean LifeCycle에서 한 번만 수행되는 것이 보장됨 -> 생성자가 여러번 호출이 되는 것을 방지
+        > ### @PostConstruct는 Spring에 의존적이지 않은 Java의 기능, 의존성 주입이 끝난 이후의 작업이 필요할 경우 사용
+        > ### 생성자가 동작하는 시점에는 의존성 주입이 되지 않은 상태 
+        > ### @PostConstruct가 적용된 메서드는 Bean LifeCycle에서 한 번만 수행되는 것이 보장됨 -> 생성자가 여러번 호출이 되는 것을 방지
       * ### @Autowired 생성자 주입
         * ```java
                 @Component
@@ -174,16 +174,16 @@
                       this.fooObj = fooObj;
                    }
                 }
-      * ### 하지만 Spring은 기본적으로 빈을 싱글톤으로 관리하므로, static 필드를 사용하지 않아도 같은 인스턴스 공유가능
-      * ###  static필드는 여러 문제를 초래할 수 있어 권장하지 않음 (private final 권장)
+      > ### 하지만 Spring은 기본적으로 빈을 싱글톤으로 관리하므로, static 필드를 사용하지 않아도 같은 인스턴스 공유가능
+      > ###  static필드는 여러 문제를 초래할 수 있어 권장하지 않음 (private final 권장)
   * ## Bean(싱글톤)등록시 유의할 점
-    * ### 싱글톤(공유객체) 안에 프로토타입(매번 새로운 객체 생성)을 넣지마라
-    * ### read-only
-    * ### 불변 -> 변하지 않으려면 상태가 없어야함 (iv 존재 X)
-    * ### iv가 있으면 동기화 처리가 되어 있어야함
+    > ### 싱글톤(공유객체) 안에 프로토타입(매번 새로운 객체 생성)을 넣지마라
+    > ### read-only
+    > ### 불변 -> 변하지 않으려면 상태가 없어야함 (iv 존재 X)
+    > ### iv가 있으면 동기화 처리가 되어 있어야함
   * ## Spring Context가 로딩 시점에 로직 실행 하는 방법 (@PostCOnstruct, @PreDestroy)
-    * ### 스프링 프레임워크는 Bean 생성부터 소멸까지의 생명주기 관리를 해줌 (즉, 객체 관리 주체가 개발자가 아닌 프레임워크)
+    > ### 스프링 프레임워크는 Bean 생성부터 소멸까지의 생명주기 관리를 해줌 (즉, 객체 관리 주체가 개발자가 아닌 프레임워크)
     * <img src="https://github.com/user-attachments/assets/a03c59a4-4874-46c9-923d-07ac030cbea3" width="500">
-    * ### @PostConstruct : '초기화 콜백'
-    * ### @PreDestroy : '소멸 콜백'
+    > ### @PostConstruct : '초기화 콜백'
+    > ### @PreDestroy : '소멸 콜백'
   
