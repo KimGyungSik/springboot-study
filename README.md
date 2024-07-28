@@ -186,4 +186,14 @@
     * <img src="https://github.com/user-attachments/assets/a03c59a4-4874-46c9-923d-07ac030cbea3" width="500">
     > ### @PostConstruct : '초기화 콜백'
     > ### @PreDestroy : '소멸 콜백'
+
+* ## Filter, Intercepter, AOP 차이점 정리
+  > ### 호출되는 시기가 각기 다름
+    * <img src="" width="500">
+  > ### Filter - 스프링과 무관하게 동작, Dispatcher Servlet(적합한 컨트롤러를 찾아 위임 해주는 역할)이 실행 되기전 수행 -> 스프링과 분리되어야 하는 기능에 적합
+  
+  > ### Interceptor - Controller로 넘겨주는 정보(데이터)의 가공 / 로그인 체크, 권한 체크, 프로그램 실행시간 계산작업 로그확인 등의 작업
+  
+  > ### Aop - Interceptor나 Filter와 달리 메서드 전후의 지점에 자유롭게 설정가능 즉, URL 기반이 아닌 PointCut 단위로 동작 / 로깅, 트랜잭션, 에러 처리 등 비즈니스단의 메서드에서 조금 더 세밀하게 조정하고 싶을 떄 사용
+
   
