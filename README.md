@@ -260,4 +260,9 @@
   * <img src="" width="500">
   * <img src="" width="500">
   * ### PersistenceContext에 없으면 무조건 DB에 select문을 실행
+
+* ## 쿼리 메서드 (DB에 독립적 -> 오류 검출에 쉬움)
+  * <img src="" width="500">
+  * <img src="" width="500">
+  > delete메서드는 n번 실행될 수 있기 때문에 @Transactional 처리를 해줘야함 / delete의 경우, 여러 건을 delete할 수 있기 때문에 Tx처리 필수
   
