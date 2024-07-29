@@ -222,25 +222,36 @@
   
   
 * ## EntityManager와 EntityManagerFactory
-  * <img src="" width="500">
-  * <img src="" width="500">
-  * <img src="" width="500">
-  * <img src="" width="500">
+  * <img src="https://github.com/user-attachments/assets/1be386f3-9ac8-4c1f-a189-72adffb920b7" width="500">
+
+  * <img src="https://github.com/user-attachments/assets/735b7894-9798-4424-9402-184c452012a4" width="500">
+
+  * <img src="https://github.com/user-attachments/assets/cdc0883a-41b3-4e97-a6a2-eb7a5483c120" width="500">
+
+  * <img src="https://github.com/user-attachments/assets/444ee34a-9877-4288-a45c-3aa07e93a957" width="500">
+
   * ### PreparedStatement를 쓰는 이유 : 1. 성능 2. 보안
-  * <img src="" width="500">
+  * <img src="https://github.com/user-attachments/assets/e600b3c8-a9dc-495e-b8e4-77f7c15b2433" width="500">
+
 
   * ### PersistenceContext (엔티티 저장공간)
-  * <img src="" width="500">
+  * <img src="https://github.com/user-attachments/assets/e1e49dd5-7bd9-4182-a380-2ca1e9e0bb83" width="500">
+
   > ## flush() : SQL전송 / commit() : SQL전송(flush()자동호출) + DB반영 
-  * <img src="" width="500">
+  * <img src="https://github.com/user-attachments/assets/91712703-ceee-4bef-9519-c18ad6776b4d" width="500">
+
   > ## 변경했을떄 SQL문이 생기는건 영속상태일때만 !!
   
   * ### PersistenceContext의 캐시(Map으로 관리)
-  * <img src="" width="500">
+  * <img src="https://github.com/user-attachments/assets/e7af3c10-d227-4f15-b579-9e43ba340e12" width="500">
+
   * em.find() : entity 조회(찾기)
-  * <img src="" width="500">
+  * <img src="https://github.com/user-attachments/assets/2fd6f7ab-8e41-480e-a808-ec76d82fdffb" width="500">
+
   * 못찾으면 DB에서 조회
-  * <img src="" width="500">
+  * <img src="https://github.com/user-attachments/assets/ed325ea2-a103-4cf0-a6a5-334eedf60f47" width="500">
+
   * em.clear() : 캐시를 다 지움
-  * <img src="" width="500">
+  * <img src="https://github.com/user-attachments/assets/a7974607-77bc-486f-8a91-382920091dab" width="500">
+
   
