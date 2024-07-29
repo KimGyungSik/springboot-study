@@ -273,13 +273,18 @@
 * ## JPQL과 네이티브 쿼리
   * ### SQL은 DB테이블을 조회 / JPQL은 엔티티를 조회
   * ### SQL은 대소문자 구별 X / JPQL은 대소문자 구별 
-  * <img src="" width="500">
+  * <img src="https://github.com/user-attachments/assets/d6242663-3148-4ea4-95dd-111fcf1d79dc" width="500">
+
   * ### 수동 Query 방법 2가지 (메서드 이름 상관 X)
-    * <img src="" width="500"> 
+    * <img src="https://github.com/user-attachments/assets/7297598a-b53a-441d-b63e-f6cc5b64dfe8" width="500">
+
   * ### JPQL의 매개변수를 지정하는 방법 2가지
-    * <img src="" width="500">
+    * <img src="https://github.com/user-attachments/assets/84b1a2e0-2763-4be4-93ff-75a2c46901d9" width="500">
+
   * ### 네이티브 쿼리 작성 (메서드 이름 상관 X) -> 훨씬 복잡한 쿼리 작성할때 쓰임
-    * <img src="" width="500">
+    * <img src="https://github.com/user-attachments/assets/768ed63b-f0e8-4b5d-99c2-ee4df6a96b8a" width="500">
+
   * ### 페이징과 정렬
-    * <img src="" width="500">
+    * <img src="https://github.com/user-attachments/assets/2469597a-9abf-432b-8422-6a12d28c6a7e" width="500">
+
   
