@@ -204,16 +204,22 @@
   * ### JDBC와 유사 (인터페이스의 집합)
   * ### HIBERNATE : JPA 구현체
   * ### ORM 프레임워크 : 객체와 DB테이블 간의 연결, 차이를 해소해줌
-  * <img src="" width="500">
-  * <img src="" width="500">
-  * <img src="" width="500">
+  * <img src="https://github.com/user-attachments/assets/c7ce79f9-c8e5-480c-bb48-fcbec3ad4158" width="500">
+
+  * <img src="https://github.com/user-attachments/assets/a7d5431f-daf1-4cf3-8132-0232f32ab1a4" width="500">
+
+  * <img src="https://github.com/user-attachments/assets/ebe2c4d7-6c52-4e5c-b7d4-dffd09c88aca" width="500">
+
 
   * ### MyBatis(DB 중심 개발) vs HIBERNATE(애플리케이션 중심 개발)
-  * <img src="" width="500">
+  * <img src="https://github.com/user-attachments/assets/df43c0a7-4e02-4db1-ba41-9e9136d0aa7f" width="500">
+
   * 애플리케이션 중심 개발 : 1. 자바클래스 작성 -> 2. Table 자동 생성 ===> 자바클래스 변경 시 테이블 자동 변경
 
   * ### Spring Data와 Spring Data JPA
-  * <img src="" width="500">
+  * <img src="https://github.com/user-attachments/assets/3dd1e547-08dc-41ac-b828-efd3dbc87d41" width="500">
+
+  
   
 * ## EntityManager와 EntityManagerFactory
   * <img src="" width="500">
