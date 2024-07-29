@@ -189,7 +189,8 @@
 
 * ## Filter, Intercepter, AOP 차이점 정리
   > ### 호출되는 시기가 각기 다름
-    * <img src="" width="500">
+    * <img src="https://github.com/user-attachments/assets/0a9c92e2-87f3-4785-93f5-5de8d44daa4b" width="500">
+
   > ### Filter - 스프링과 무관하게 동작, Dispatcher Servlet(적합한 컨트롤러를 찾아 위임 해주는 역할)이 실행 되기전 수행 -> 스프링과 분리되어야 하는 기능에 적합
   
   > ### Interceptor - Controller로 넘겨주는 정보(데이터)의 가공 / 로그인 체크, 권한 체크, 프로그램 실행시간 계산작업 로그확인 등의 작업
