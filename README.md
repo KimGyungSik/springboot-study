@@ -215,4 +215,26 @@
   * ### Spring Data와 Spring Data JPA
   * <img src="" width="500">
   
+* ## EntityManager와 EntityManagerFactory
+  * <img src="" width="500">
+  * <img src="" width="500">
+  * <img src="" width="500">
+  * <img src="" width="500">
+  * ### PreparedStatement를 쓰는 이유 : 1. 성능 2. 보안
+  * <img src="" width="500">
+
+  * ### PersistenceContext (엔티티 저장공간)
+  * <img src="" width="500">
+  > ## flush() : SQL전송 / commit() : SQL전송(flush()자동호출) + DB반영 
+  * <img src="" width="500">
+  > ## 변경했을떄 SQL문이 생기는건 영속상태일때만 !!
+  
+  * ### PersistenceContext의 캐시(Map으로 관리)
+  * <img src="" width="500">
+  * em.find() : entity 조회(찾기)
+  * <img src="" width="500">
+  * 못찾으면 DB에서 조회
+  * <img src="" width="500">
+  * em.clear() : 캐시를 다 지움
+  * <img src="" width="500">
   

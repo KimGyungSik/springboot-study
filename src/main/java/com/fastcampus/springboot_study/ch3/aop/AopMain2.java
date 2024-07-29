@@ -86,7 +86,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 
-@SpringBootApplication // Spring Boot 애플리케이션 클래스
+//@SpringBootApplication // Spring Boot 애플리케이션 클래스
 @EnableAspectJAutoProxy // AOP 자동 설정
 public class AopMain2 {
     public static void main(String[] args) {
