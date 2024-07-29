@@ -264,8 +264,9 @@
   * ### PersistenceContext에 없으면 무조건 DB에 select문을 실행
 
 * ## 쿼리 메서드 (DB에 독립적 -> 오류 검출에 쉬움)
-  * <img src="" width="500">
-  * <img src="" width="500">
+  * <img src="https://github.com/user-attachments/assets/7495f511-50bf-4e1f-b162-8ac6d9966eb4" width="500">
+  * <img src="https://github.com/user-attachments/assets/2e7ee4a7-2e6e-4f49-900b-0ddc9b88e8ec" width="500">
+  * <img src="https://github.com/user-attachments/assets/0370faa4-9d7b-49d2-97d9-aa545e93e1fe" width="500">
   > delete메서드는 n번 실행될 수 있기 때문에 @Transactional 처리를 해줘야함 / delete의 경우, 여러 건을 delete할 수 있기 때문에 Tx처리 필수
   
 
