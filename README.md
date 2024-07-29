@@ -197,3 +197,21 @@
   > ### Aop - Interceptor나 Filter와 달리 메서드 전후의 지점에 자유롭게 설정가능 즉, URL 기반이 아닌 PointCut 단위로 동작 / 로깅, 트랜잭션, 에러 처리 등 비즈니스단의 메서드에서 조금 더 세밀하게 조정하고 싶을 떄 사용
 
   
+---
+
+* ## JPA란? (Java Persistence API)
+  * ### JDBC와 유사 (인터페이스의 집합)
+  * ### HIBERNATE : JPA 구현체
+  * ### ORM 프레임워크 : 객체와 DB테이블 간의 연결, 차이를 해소해줌
+  * <img src="" width="500">
+  * <img src="" width="500">
+  * <img src="" width="500">
+
+  * ### MyBatis(DB 중심 개발) vs HIBERNATE(애플리케이션 중심 개발)
+  * <img src="" width="500">
+  * 애플리케이션 중심 개발 : 1. 자바클래스 작성 -> 2. Table 자동 생성 ===> 자바클래스 변경 시 테이블 자동 변경
+
+  * ### Spring Data와 Spring Data JPA
+  * <img src="" width="500">
+  
+  
