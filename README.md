@@ -256,9 +256,11 @@
 
 
 * ## Spring Data JPA 
-  * <img src="" width="500">
-  * <img src="" width="500">
-  * <img src="" width="500">
+  * <img src="https://github.com/user-attachments/assets/e56c38b8-2061-4002-8747-21cefeac8645" width="500">
+
+  * <img src="https://github.com/user-attachments/assets/9284fda1-cf6b-47e8-8b91-332cf589c91c" width="500">
+
+  * <img src="https://github.com/user-attachments/assets/58f0ed58-7519-437d-8a44-066eab8070eb" width="500">
   * ### PersistenceContext에 없으면 무조건 DB에 select문을 실행
 
 * ## 쿼리 메서드 (DB에 독립적 -> 오류 검출에 쉬움)
