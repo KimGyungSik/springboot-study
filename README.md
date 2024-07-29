@@ -254,4 +254,10 @@
   * em.clear() : 캐시를 다 지움
   * <img src="https://github.com/user-attachments/assets/a7974607-77bc-486f-8a91-382920091dab" width="500">
 
+
+* ## Spring Data JPA 
+  * <img src="" width="500">
+  * <img src="" width="500">
+  * <img src="" width="500">
+  * ### PersistenceContext에 없으면 무조건 DB에 select문을 실행
   
