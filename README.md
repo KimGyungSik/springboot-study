@@ -282,4 +282,25 @@
     * <img src="" width="500">
   * ### 페이징과 정렬
     * <img src="" width="500">
+
+  
+  
+* ## Querydsl로 동적 쿼리 작성하기
+  * ### 문자열(Query) -> 메서드 (타입이나 구문체크 쉬움)
+  * <img src="" width="500">
+
+  * ### JPAQuery와 JPAQueryFactory
+    * ### 1. em에서 JPAQueryFactory를 생성 
+    * ### 2. JPAQueryFactory로 JPAQuery 생성 -> 쿼리를 메서드로 작성
+    * ### 3. JPAQuery를 실행해서 조회결과 얻기
+  * <img src="" width="500">
+
+  * ### JPAQueryFactory로 쿼리 작성하기
+    * ### 전체 필드 조회 : JPAQuery<T> / 일부 필드 조회 : JPAQuery<Tuple>
+  * <img src="" width="500">
+
+  * ### BooleanBuilder로 동적 쿼리 작성하기
+  * <img src="" width="500">
+
+  
   
