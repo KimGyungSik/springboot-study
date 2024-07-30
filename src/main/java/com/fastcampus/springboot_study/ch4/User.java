@@ -1,17 +1,25 @@
 package com.fastcampus.springboot_study.ch4;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 public class User {
     @Id // PK로 지정
+    @Column(name = "user_id")
     private String id;
     private String password;
     private String name;
     private String email;
+
+    // FetchType.EAGER - 두 엔티티의 정보를 같이 가져오는것(join)
+    // FetchType.LAZY - 따로 가져오는 것. 나중에 getList(). default
+//    @OneToMany(mappedBy = "user" , fetch = FetchType.EAGER) // User하나에 여러 Board
+    @OneToMany(mappedBy = "user" , fetch = FetchType.LAZY) // User하나에 여러 Board
+    List<Board> list = new ArrayList<>();
     private Date inDate; // 입력일
     private Date upDate; // 변경일
 
@@ -22,9 +30,18 @@ public class User {
                 ", password='" + password + '\'' +
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
+                ", list=" + list +
                 ", inDate=" + inDate +
                 ", upDate=" + upDate +
                 '}';
+    }
+
+    public List<Board> getList() {
+        return list;
+    }
+
+    public void setList(List<Board> list) {
+        this.list = list;
     }
 
     public String getId() {

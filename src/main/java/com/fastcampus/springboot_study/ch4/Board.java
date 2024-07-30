@@ -13,6 +13,10 @@ public class Board {
     private String writer;
     private String content;
     private Long viewCnt;
+
+    @ManyToOne // 여러 Board에 하나의 User, FK자동 생성
+    @JoinColumn(name = "user_id", nullable = false) // inner join
+    private User user;
     @Temporal(value = TemporalType.TIMESTAMP)
     private Date inDate;
     @Temporal(value = TemporalType.TIMESTAMP)
@@ -26,9 +30,18 @@ public class Board {
                 ", writer='" + writer + '\'' +
                 ", content='" + content + '\'' +
                 ", viewCnt=" + viewCnt +
+//                ", user=" + user +  순환참조되기 때문에 주석처리
                 ", inDate=" + inDate +
                 ", upDate=" + upDate +
                 '}';
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public Long getBno() {
