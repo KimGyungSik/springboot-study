@@ -334,3 +334,6 @@
     * ### LAZY로 처리 시 해당 메서드에 @Transactional을 붙여줘야함   
   * <img src="" width="500">
   
+* ## 레이어 아키텍처 
+  * <img src="" width="500">
+  
