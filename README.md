@@ -312,27 +312,32 @@
   
 * ## 연관 관계 맵핑하기
   * ### 객체모델(단방향) X 2 = 양방향
-  * <img src="" width="500">
+  * <img src="https://github.com/user-attachments/assets/f04e67b1-507a-4efd-9561-e794588802e5" width="500">
+
   * ### 일대일 관계 - 단방향
-  * <img src="" width="500">
+  * <img src="https://github.com/user-attachments/assets/890df861-6c88-4af8-8fb3-de3cd8370c31" width="500">
+
   * ### 일대일 관계 - 양방향 
     * ### Key 종류 2가지 : PK (테이블의 한 행을 구별해주는 컬럼) / FK (다른 Table의 PK)
     * ### 조인 종류 2가지 : outer join (null포함) / inner join(null포함X)
     * ### nullable = false -> 필수값만 (inner join 한다는 것)
     * ### FK가 양쪽에 생길 필요가 없음 한곳에만 생기게 해야함 (mappedBy = "테이블명") -> FK 안생김
     * ### FK 2개 -> join 2번 ==> 성능저하
-  * <img src="" width="500">
+  * <img src="https://github.com/user-attachments/assets/66a3cf00-01f9-4089-9e47-114c1b648dba" width="500">
+
 
   
   * ### 다대일 관계 - 단방향
     * ### nullable = false --> outer join에서 inner join으로 바꿔줌
-  * <img src="" width="500">
+  * <img src="https://github.com/user-attachments/assets/6262257a-e75f-4de6-9419-9a1787803f7c" width="500">
+
   * ### 다대일 관계 - 양방향
     * ### (Default)FetchType(LAZY) : 선택적(User,Board 선택해서)으로 조회 / FetchType(EAGER) : 한번에 조회 (User,Board 한번에)
     * ### FetchType.EAGER - 두 엔티티의 정보를 같이 가져오는것(join)
     * ### FetchType.LAZY - 따로 가져오는 것. 나중에 getList(). default
     * ### LAZY로 처리 시 해당 메서드에 @Transactional을 붙여줘야함   
-  * <img src="" width="500">
+  * <img src="https://github.com/user-attachments/assets/a0ceed37-ea3b-4581-95cb-d346bbe42572" width="500">
+
   
 * ## 레이어 아키텍처 
   * <img src="" width="500">
