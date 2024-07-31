@@ -253,11 +253,10 @@
 
   * em.find() : entity 조회(찾기)
   * <img src="https://github.com/user-attachments/assets/2fd6f7ab-8e41-480e-a808-ec76d82fdffb" width="500">
-  * <img src="https://github.com/user-attachments/assets/d6240b17-8c63-4acd-a89c-23c92305b146" width="500">
-
 
   * 못찾으면 DB에서 조회
   * <img src="https://github.com/user-attachments/assets/ed325ea2-a103-4cf0-a6a5-334eedf60f47" width="500">
+  * <img src="https://github.com/user-attachments/assets/d6240b17-8c63-4acd-a89c-23c92305b146" width="500">
 
   * em.clear() : 캐시를 다 지움
   * <img src="https://github.com/user-attachments/assets/a7974607-77bc-486f-8a91-382920091dab" width="500">
