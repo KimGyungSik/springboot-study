@@ -236,7 +236,9 @@
 
   * ### PersistenceContext (엔티티 저장공간)
   * <img src="https://github.com/user-attachments/assets/e1e49dd5-7bd9-4182-a380-2ca1e9e0bb83" width="500">
+  * <img src="https://github.com/user-attachments/assets/d4f5a7ba-b08f-4c2b-ba5d-cf0868bf9d83" width="500">
 
+    
   > ## flush() : SQL전송 / commit() : SQL전송(flush()자동호출) + DB반영 
   * <img src="https://github.com/user-attachments/assets/91712703-ceee-4bef-9519-c18ad6776b4d" width="500">
 
@@ -244,9 +246,15 @@
   
   * ### PersistenceContext의 캐시(Map으로 관리)
   * <img src="https://github.com/user-attachments/assets/e7af3c10-d227-4f15-b579-9e43ba340e12" width="500">
+  * <img src="https://github.com/user-attachments/assets/37d26cd3-104c-471b-aa34-772a7199830d" width="500">
+  * <img src="https://github.com/user-attachments/assets/87ab146a-6c4a-487d-97df-72310eafa8b5" width="500">
+  * <img src="https://github.com/user-attachments/assets/081abd87-76ab-438a-a4d1-a6073481a1ca" width="500">
+
 
   * em.find() : entity 조회(찾기)
   * <img src="https://github.com/user-attachments/assets/2fd6f7ab-8e41-480e-a808-ec76d82fdffb" width="500">
+  * <img src="https://github.com/user-attachments/assets/d6240b17-8c63-4acd-a89c-23c92305b146" width="500">
+
 
   * 못찾으면 DB에서 조회
   * <img src="https://github.com/user-attachments/assets/ed325ea2-a103-4cf0-a6a5-334eedf60f47" width="500">
@@ -340,5 +348,5 @@
 
   
 * ## 레이어 아키텍처 
-  * <img src="" width="500">
-  
+  * <img src="https://github.com/user-attachments/assets/0ce12be7-6390-43c4-beec-32dd607d037b" width="500">
+ 
