@@ -18,14 +18,19 @@ public class PerformanceInterceptor implements HandlerInterceptor { // 단일 �
         request.setAttribute("startTime",startTime); // request객체에 startTime을 저장
 
         // handler -  요청하고 연결된 컨트롤러의 메서드
-        HandlerMethod method = (HandlerMethod) handler;
-        System.out.println("method.getMethod() ="+method.getMethod()); // URL 하고 연결된 메서드
-        System.out.println("method.getBean() ="+method.getBean()); // 메서드가 포함된 컨트롤러
-
+//        HandlerMethod method = (HandlerMethod) handler;
+        // handler가 HandlerMethod인지 확인
+        if (handler instanceof HandlerMethod) {
+            HandlerMethod handlerMethod = (HandlerMethod) handler;
+            System.out.println("method.getMethod() =" + handlerMethod.getMethod()); // URL 하고 연결된 메서드
+            System.out.println("method.getBean() =" + handlerMethod.getBean()); // 메서드가 포함된 컨트롤러
+        }
 
         // return true; -> 다음 인터셉터나 컨트롤러를 호출 false면 호출안함
         return HandlerInterceptor.super.preHandle(request, response, handler);
+
     }
+
 
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
